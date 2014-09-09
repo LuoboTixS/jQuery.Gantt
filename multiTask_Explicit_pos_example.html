@@ -119,28 +119,28 @@ $(".selector").gantt({
 						<code>itemsPerPage</code>
 					</td>
 					<td>7</td>
-					<td>Number (Not necessary when multiTaskPerRow is set true) </td>
+					<td>Number</td>
 				</tr>
 				<tr>
 					<td>
 						<code>multiTaskPerRow</code>
 					</td>
 					<td>false</td>
-					<td>Boolean (Only necessary when multiTaskPerRow is set true) </td>
+					<td>Boolean</td>
 				</tr>
 				<tr>
 					<td>
 						<code>categoryAmount</code>
 					</td>
 					<td>0</td>
-					<td>Number (Only necessary when multiTaskPerRow is set true) </td>
+					<td>Number</td>
 				</tr>
 				<tr>
 					<td>
 						<code>rowsPerPage</code>
 					</td>
 					<td>0</td>
-					<td>Number (Only necessary when multiTaskPerRow is set true) </td>
+					<td>Number</td>
 				</tr>
 				<tr>
 					<td>
@@ -380,7 +380,7 @@ values: [{
 			</tbody>
 		</table>
 
-		<h2>MultiTask Mode</h2>
+		<h2>MultiTask Mode (Explicitly define the vertical position/row)</h2>
 
 		<pre class="prettyprint">
 source: [{
@@ -527,6 +527,13 @@ source: [{
 						to: "/Date(1323865200000)/",
 						label: "Development",
 						customClass: "ganttGreen"
+					},{
+						
+						cat: "2",
+						from: "/Date(1320192000000)/",
+						to: "/Date(1322401600000)/",
+						label: "Requirement Gathering",
+						customClass: "ganttRed"
 					}]
 				},{
 					name: "Sprint 2",
@@ -546,6 +553,13 @@ source: [{
 						cat: "0",
 						from: "/Date(1322611200000)/",
 						to: "/Date(1323302400000)/",
+						label: "Scoping",
+						customClass: "ganttRed"
+					},
+					{
+						cat: "0",
+						from: "/Date(1332611200000)/",
+						to: "/Date(1333302400000)/",
 						label: "Scoping",
 						customClass: "ganttRed"
 					}]
@@ -568,6 +582,13 @@ source: [{
 						to: "/Date(1326785200000)/",
 						label: "Development",
 						customClass: "ganttGreen"
+					},
+					{
+						cat: "1",
+						from: "/Date(1332611200000)/",
+						to: "/Date(1333302400000)/",
+						label: "Scoping",
+						customClass: "ganttRed"
 					}]
 				},{
 					name: "",

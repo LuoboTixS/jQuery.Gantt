@@ -1021,9 +1021,11 @@
                 $.each(element.data, function(i, entry) {
                     switch (settings.multiTaskPerRow) {
                         case true:
-                            if (entry.values[0].cat <= ((element.pageNum + 1) * settings.rowsPerPage - 1) && (entry.values[0].cat > (element.pageNum * settings.rowsPerPage - 1))) {
 
                                 $.each(entry.values, function(j, day) {
+                                    if (entry.values[j].cat <= ((element.pageNum + 1) * settings.rowsPerPage - 1) && (entry.values[j].cat > (element.pageNum * settings.rowsPerPage - 1))) {
+
+                                    
                                     var _bar = null;
                                     var rowNumber = null;
 
@@ -1200,9 +1202,10 @@
                                     } else if ($l) {
                                         $l.css("color", "");
                                     }
+                                    }
                                 });
 
-                            }
+                            
                             break;
                         default:
                             if (i >= element.pageNum * settings.itemsPerPage && i < (element.pageNum * settings.itemsPerPage + settings.itemsPerPage)) {
